@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel = "stylesheet" type = "text/css" href = "formatting.css"> <!-- Links the sylesheet to the HTML file  -->
+	<title>Final Assignment Form</title>	
+	<script type = "text/javascript" src = "checker.js"></script> <!-- Links the javascript to the HTML file  -->
+	
+</head>
+
+<body>
+
+<H1>Customer Satisfaction Survey</H1> <!-- I chose to do a customer satisfaction survey because they are used often and are relevant  -->
+	
+	<!-- Possible questions: 
+		1. What did you buy?
+		2. How many items did you buy?
+		3. What was the total cost of your purchase (subtotal whole integer)?
+		4. Verify if the cost is accurate?
+		5. Do you think that this is a fair price?
+		6. Do you have any feedback for us?
+		7. Are you satisfied with the service?
+		8. How likely are you to recommend us to family or friends?
+		9. Do you think that we are taking enough cautions to ensure your safety during these times?
+		10. What more could we do? -->
+
+<img src = "https://1utysa49sprc1qb8aw184c71-wpengine.netdna-ssl.com//wp-content/uploads/2019/04/customer-satisfaction-1.png" class = "Images" /> <!-- An image about customer service  -->
+
+<p>Thank you for agreeing to take our customer satisfaction survey. This survey will take up to 5 minutes and will ask some questions based on your experience today. We have been working very hard to ensure the safety of our customers during these trying times and would appreciate any feedback that you have for us. There have been some preset choices initiated and if the user would like to change them simply do so!</p>		
+	
+	<!-- Above is a dscription of the survey for the user to read  -->
+	
+<form> <!-- The start of the form  -->
+		<br>
+		First Name:
+		<input name = "fistName" id = "firstName" type = "text" onblur = "checkFirstName()"> <!-- The first name input area is made  -->
+		<p style = "display: inline" id = "firstNamePrompt"> &nbsp </p> <!-- The prompt area that will display if the name is valid  -->
+		
+		&nbsp &nbsp &nbsp &nbsp Last Name:
+		<input name = "lastName" id = "lastName" type = "text" onblur = "checkLastName()"> <!-- The last name input area  -->
+		<p style = "display: inline" id = "lastNamePrompt"> &nbsp </p> <!-- the prompt area that will display if the last name is valid  -->
+		
+		&nbsp &nbsp &nbsp &nbsp Age:
+		<input class = "shortNum" name = "age" id = "age" type = "number" min = "16" max = "90" value = "20"> <!-- The users age area, preset to 20  -->
+		
+		&nbsp &nbsp &nbsp &nbsp Gender:
+		<input type = "radio" name = "gender" value = "male" checked>Male <!-- The users gender area, preset to male  -->
+		<input type = "radio" name = "gender" value = "female">Female
+		<input type = "radio" name = "gender" value = "other">Other
+		
+		<br>
+		<br>
+
+		Select the items that you bought:
+		<input type = "checkbox" name = "item" value = "tshirts" checked>T-Shirts <!-- An area for the user to select what they bought, preset to just t-shirts  -->
+		<input type = "checkbox" name = "item" value = "pants">Pants
+		<input type = "checkbox" name = "item" value = "socks">Socks
+		<input type = "checkbox" name = "item" value = "jackets">Jackets
+		<input type = "checkbox" name = "item" value = "pjs">PJs
+		<input type = "checkbox" name = "item" value = "underwear">Underwear
+		<input type = "checkbox" name = "item" value = "belts">Belts
+		<input type = "checkbox" name = "item" value = "hats">Hats
+		<input type = "checkbox" name = "item" value = "vests">Vests		
+		
+		&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Enter the price you paid (CAD):		
+		<input class = "shortNum" name = "price" type = "number" id = "cost" min = "0" value = "0" onblur = "checkCost()"> <!-- The cost input area, min of $0  -->
+		<p style = "display: inline" id = "pricePrompt"> &nbsp </p> <!-- The area for the prompt if thee user says they spent $0, is a reminder  -->
+		
+		<br>
+		<br>
+		
+		Do you think that this was a fair price? If possible, a reason would be appreciated in the textbox below: <!-- Radio selection to see if it is a fair price  -->
+		<input type = "radio" name = "fairPrice" value = "yes" checked>Yes
+		<input type = "radio" name = "fairPrice" value = "no">No		
+		<input type = "radio" name = "fairPrice" value = "unsure">Unsure		
+		
+		<br>
+		<br>
+		
+		<textarea class = "longAnswer" id = "fairPrice" name = "fairPrice" onblur = "checkLongAnswer1()"></textarea> <!-- Text area to provide reasoning  -->
+		<p style = "display: inline" id = "fairPricePrompt"> &nbsp </p> <!-- Prompt that will say thank you or tell the user they left it empty  -->
+		
+		<br>
+		<br>
+		
+		Satisfaction on a scale of 1 (horrible) to 5 (amazing):
+		<input class = "shortNum" name = "satisfaction" type = "number" id = "satisfaction" min = "1" value = "3"> <!-- Area for the user to enter their satisfaction, min of 1, max of 5  -->
+		
+		&nbsp &nbsp &nbsp &nbsp &nbsp Likelyhood of recommendation to friends 1 (very unlikely) to 5 (very likely): <!-- Area for user to recomment to friend, min 1, max 5 -->
+		<input class = "shortNum" name = "recommend" type = "number" id = "recommend" min = "1"value = "3">
+		
+		<br>
+		<br>
+		
+		Do you think that we are doing enough to ensure your safety? If possible, a reason would be appreciated in the textbox below: <!-- Area for safety of shoppers  -->
+		<input type = "radio" name = "safety" value = "yes" checked>Yes
+		<input type = "radio" name = "safety" value = "no">No
+		<input type = "radio" name = "safety" value = "unsure">Unsure		
+		
+		<br>
+		<br>
+		
+		<textarea class = "longAnswer" id = "safety" name = "safety" onblur = "checkLongAnswer2()"></textarea> <!-- User can give feedback here  -->
+		<p style = "display: inline" id = "safetyPrompt"> &nbsp </p> <!-- Prompt area that will display thank you or remind the user they left it empty  -->
+		
+		<br>
+		<br>
+		
+		What more can we do? If possible, a response would be appreciated in the textbox below: 
+		<br>		
+		<br>
+		
+		<textarea class = "longAnswer" id = "more" name = "more" onblur = "checkLongAnswer3()"></textarea><!-- An area for last notes from the shopper -->
+		<p style = "display: inline" id = "morePrompt"> &nbsp </p> <!-- Prompt area that will display thank you or remind the user they left it empty  -->
+		
+		<br>
+		<br>
+		
+		<p class = "endingStatement">Thank you for completing the survey, click the "Finish Survey" button below</p> <!-- Ending Message -->
+		
+		<br>
+		<br>
+		
+		<img src = "https://www.kudos.com/assets/Blog/b5843aa89b/thankyou__FillWzcwMCw0NDBd.jpg" class = "Images"/> <!--thank you image -->
+		
+		<br>
+		<br>
+		
+</form>
+
+<p id = "finish" class = "finishSurvey" onclick = "displaySubmittedMessage()">Finish Survey</p> <!-- Final "submission button"-->
+<p id = "submittedMessage" > &nbsp </p> <!--Will display submitted to shopper upon click-->
+
+</body>
+
+
+
+
+</html>

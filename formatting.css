@@ -1,0 +1,42 @@
+body{
+	background-color: azure; /*Sets background to aure*/
+}
+
+H1{
+	text-align:center; /*Aligns text to center*/
+	text-decoration:underline; /*underlines text*/
+}
+
+.Images{
+	display: block; /*For centerring images*/
+	margin-left: auto; /*For centerring images*/
+	margin-right: auto; /*For centerring images*/
+	width: 250px; /*Sets width for images*/
+	height: 200px; /*Sets height for images */
+}
+
+.longAnswer{
+	width: 750px; /*Width for long answer question text area*/
+	height: 20px; /*Height for text area question area*/
+	padding: 5px; /*Extra space*/
+	display: block; /*For centerring text area*/
+    margin-left: auto; /*For centerring text area*/
+    margin-right: auto; /*For centerring text area*/
+}
+
+.shortNum{
+	width: 50px; /*Width of the number entry area*/
+}
+
+.endingStatement{
+	text-align:center; /*Aligns the ending statement in the center*/
+}
+
+.finishSurvey{
+	text-align: center; /*Aligns the text in the center*/
+	border-style: double; /*Border styke for 2 lines*/
+	width: 125px; /*Width of the text*/
+	display: block; /*For centerring border*/
+    margin-left: auto; /*For centerring border*/
+    margin-right: auto; /*For centerring border*/
+}
