@@ -1,8 +1,8 @@
 # CustomerSurveyForm
-A basic form that I created using HTML, CSS, and Javascript.
+A basic form that I created using HTML, CSS, and Javascript. 
 
-To see pictures of the form, take a look at the two links below:
+## Demo
 
-https://drive.google.com/file/d/1_XdDR8aDTe03ZNOz_ZVJNDciT5vhVO0b/view?usp=sharing
+A video of the form in use can be found [here](https://youtu.be/xQo0Mv3OtnQ). Below is an image.
 
-https://drive.google.com/file/d/1gpxxooFbblShp-0eGckvdMFg4jruptO6/view?usp=sharing
+![image](https://user-images.githubusercontent.com/67477587/127751796-1900bddd-11c6-4337-b0b3-644d6afd36b5.png)
